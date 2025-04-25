@@ -5,11 +5,8 @@ env:
   GITHUB_ACTIONS: true
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch:
 
 jobs:
   github-task-job:
@@ -26,4 +23,5 @@ jobs:
 
       - name: Show branch and repository
         run: echo "Name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}"
+
 
